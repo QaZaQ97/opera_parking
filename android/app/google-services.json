@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "267147436584",
+    "project_id": "opera-parking",
+    "storage_bucket": "opera-parking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267147436584:android:33744ec7b571b82e33cb1d",
+        "android_client_info": {
+          "package_name": "com.example.opera_parking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267147436584-dk8es6uq5802n595fspdf6c8vrcv12da.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoIuplYx6rlSbM9pCyuWHpmOMWb1qILis"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267147436584-dk8es6uq5802n595fspdf6c8vrcv12da.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
