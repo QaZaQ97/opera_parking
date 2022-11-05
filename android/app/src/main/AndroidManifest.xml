@@ -1,5 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.opera_parking">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.opera_parking">
+   <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="opera_parking"
         android:name="${applicationName}"

@@ -11,13 +11,13 @@ class CarsLiist extends StatefulWidget {
 class _CarsLiistState extends State<CarsLiist> {
   String carNumber = '';
 
-  Widget buildCar(String name, String color, String number) {
+  Widget buildCar(String name, String color, String number, String house) {
     return ListTile(
       leading: CircleAvatar(
         child: Text(number),
       ),
-      title: Text(name),
-      subtitle: Text(color),
+      title: Text('Марка: $name\nЦвет: $color'),
+      subtitle: Text('Номер квартиры: $house'),
     );
   }
 
@@ -28,8 +28,10 @@ class _CarsLiistState extends State<CarsLiist> {
       child: Column(
         children: [
           TextField(
+            keyboardType: TextInputType.number,
             decoration: InputDecoration(
-              labelText: 'Поиск',
+              hintText: 'Введите гос номер машины',
+              labelText: 'Поиск по гос номеру',
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
                 borderSide: const BorderSide(color: Colors.blue),
@@ -55,10 +57,10 @@ class _CarsLiistState extends State<CarsLiist> {
                         itemBuilder: (context, index) {
                           var data = snapshot.data!.docs[index].data() as Map<String, dynamic>;
                           if (carNumber.isEmpty) {
-                            return buildCar(data['name'], data['color'], data['number']);
+                            return buildCar(data['name'], data['color'], data['number'].toString(), data['house']);
                           }
-                          if (data['number'].toString().startsWith(carNumber)) {
-                            return buildCar(data['name'], data['color'], data['number']);
+                          if (data['number'].startsWith(carNumber)) {
+                            return buildCar(data['name'], data['color'], data['number'].toString(), data['house']);
                           }
                           return Container(color: Colors.red);
                         },
